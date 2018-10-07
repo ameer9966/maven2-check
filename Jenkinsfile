@@ -4,14 +4,14 @@ node {
 
     try {
         stage ('job1') {
-            checkout scm
+            echo "i am job1"
         }
         stage ('job2') {
-            sh "echo 'hello.sh'"
+            echo "i am job2"
         }
        
         stage ('job3') {
-            sh "echo 'hello.sh'"
+            echo "i am job3"
         }
     } catch (err) {
         currentBuild.result = 'FAILED'
